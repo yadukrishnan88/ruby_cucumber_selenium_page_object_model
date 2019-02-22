@@ -13,6 +13,9 @@ case ENV['browser']
   when 'firefox'
     Selenium::WebDriver::Firefox.driver_path = 'drivers/geckodriver.exe'
     $browser = Selenium::WebDriver.for :firefox
+  when 'ie'
+    Selenium::WebDriver::IE.driver_path = 'drivers/IEDriverServer.exe'
+    $browser = Selenium::WebDriver.for :ie
   else
     Selenium::WebDriver::Chrome.driver_path = 'drivers/chromedriver.exe'
     $browser = Selenium::WebDriver.for :chrome
