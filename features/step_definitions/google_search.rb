@@ -7,5 +7,5 @@ When(/^I search for "([^"]*)"$/) do |search_term|
 end
 
 Then(/^I should see the results$/) do
-  puts "hello"
+  puts " "
 end
