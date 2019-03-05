@@ -6,5 +6,9 @@ class GoogleHomePage
   def web_search(search_key)
     self.search_box = search_key
     search_button
+    verify_page_title(search_key)
+  end
+  def verify_page_title(search_key)
+    assert_equal("#{search_key} - Google Search",@browser.title, "Incorrect Page title is displayed")
   end
 end

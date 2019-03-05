@@ -3,6 +3,8 @@ require 'page-object'
 require 'data_magic'
 require 'selenium-webdriver'
 require 'yaml'
+require 'test/unit/assertions'
+include Test::Unit::Assertions
 World(PageObject::PageFactory)
 
 # $config = YAML.load_file 'config/config.yml'
